@@ -6,11 +6,15 @@ class PostForm extends Component {
     super(props)
     this.state = {
       name: this.props.post.name,
-      content: this.props.post.content
+      content: this.props.post.content,
+      // formErrors: {name: ''},
+      // nameValid: false,
+      // formValid: false
     }
   }
 
   handleInput = (e) => {
+    this.props.resetNotification()
     this.setState({[e.target.name]: e.target.value})
   };
 
@@ -30,7 +34,8 @@ class PostForm extends Component {
       <div className="tile">
         <form onBlur={this.handleBlur} >
           <input className="input" type="text" name="name" placeholder="Enter name of the post"
-            value={this.state.name} onChange={this.handleInput} />
+            value={this.state.name} onChange={this.handleInput}
+            ref={this.props.nameRef} />
           <textarea className="input" name="content" placeholder="Enter content"
             value={this.state.content} onChange={this.handleInput} ></textarea>
         </form>

@@ -6,25 +6,30 @@ module Api::V1
     end
 
     def create
-      @post = Post.create(posts_params)
-      render json: @post
+      @post = Post.new(posts_params)
+      if @post.save
+        render json: @post
+      else
+        render json: @post.errors, status: :unprocessable_entity
+      end
     end
 
     def update
-      current_post.update(posts_params)
-      render json: current_post
+      @post = Post.find(params[:id])
+      @post.update_attributes(posts_params)
+      render json: @post
     end
 
     def destroy
-      current_post.destroy
-      redirect_to posts_path
+      @post= Post.find(params[:id])
+      if @post.destroy
+        head :no_content, status: :ok
+      else
+        render json: @post.errors, status: :unprocessable_entity
+      end
     end
 
     private
-
-    def current_post
-      @post = Post.find(params[:id])
-    end
 
     def posts_params
       params.require(:post).permit(:name, :content)

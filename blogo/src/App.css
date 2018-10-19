@@ -15,35 +15,55 @@
 }
 
 .tile {
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-  background: lightyellow;
+  height: 140px;
+  width: 305px;
+  margin: 37px;
+  background: lightcyan;
   float: left;
-  font-size: 11px;
-  text-align: left;
+  font-size: 14px;
+  text-align: center;
 }
 
 .newPostButton {
-  background: darkblue;
+  background: dimgrey;
   color: white;
   border: none;
-  font-size: 18px;
+  font-size: 27px;
   cursor: pointer;
   margin-right: 10px;
-  margin-left: 10px;
-  padding:10px;
+  margin-left: 38px;
+  margin-top: 40px;
+  padding: 15px;
 }
 
 .input {
   border: 0;
-  background: none;
   outline: none;
   margin-top:10px;
-  width: 140px;
-  font-size: 11px;
+  font-size: 14px;
+  width: 280px;
+  background: none;
 }
 
 .input:focus {
   border: solid 1px lightgrey;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+  font-size: 11px;
+}
+
+.deleteButton {
+  visibility: hidden;
+  float: right;
+  margin-right: 7px;
+  font-size: 25px;
+  cursor: pointer;
+  color: red;
+}
+
+.tile:hover .deleteButton {
+  visibility: visible;
 }

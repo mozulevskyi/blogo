@@ -1,24 +1,45 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is test app with rails api app and react on frontend.
 
-Things you may want to cover:
+Project details:
 
-* Ruby version
+* Ruby v - 2.4.2
 
-* System dependencies
+* Rails v - 5.1.6
 
-* Configuration
+* How to run:
 
-* Database creation
+- Download repository from Github:
+    
+    
+    $ https://github.com/ViachMoz/blogo.git
+    
+    
+- Open project:
 
-* Database initialization
+    
+    $ cd blogo-api/
+    
+- Ruby Gems installation
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    
+    $ bundle install
+- Preparing database
+  
+  
+    $ rake db:create:all
+    $ rake db:migrate
+    $ rake db:seed
+- Run rails api server
+    
+    
+    $ rails s -p 3001
+    
+- On the other tab go to the blogo folder
+    
+    
+    $ cd blogo/
+    $ yarn start
+    
+    - Whait for it...and here we go!     

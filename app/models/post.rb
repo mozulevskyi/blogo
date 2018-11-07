@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-  has_many :comments
+  belongs_to :category
+  has_many :comments, dependent: :destroy
   accepts_nested_attributes_for :comments
   # validates :name, presence: true,
   #           length: { minimum: 2 }

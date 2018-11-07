@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Post.new(category_params)
+    @category = Category.new(category_params)
     if @category.save
       render json: @category
     else
@@ -15,13 +15,13 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = Post.find(params[:id])
+    @category = Category.find(params[:id])
     @category.update_attributes(category_params)
     render json: @category
   end
 
   def destroy
-    @category= Post.find(params[:id])
+    @category= Category.find(params[:id])
     if @category.destroy
       head :no_content, status: :ok
     else

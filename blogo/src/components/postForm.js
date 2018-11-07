@@ -7,37 +7,38 @@ class PostForm extends Component {
     this.state = {
       name: this.props.post.name,
       content: this.props.post.content,
-      // formErrors: {name: ''},
-      // nameValid: false,
-      // formValid: false
     }
   }
 
-  handleInput = (e) => {
-    this.props.resetNotification()
-    this.setState({[e.target.name]: e.target.value})
+  handleInputName = (e) => {
+    this.setState({name: e.target.value})
   };
 
-  handleBlur = () => {
+  handleInputContent = (e) => {
+    this.setState({content: e.target.value})
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
     const post = {name: this.state.name, content: this.state.content}
-    axios.put(`http://localhost:3001/api/v1/posts/${this.props.post.id}`, {post: post})
+    axios.put(`http://localhost:3001/categories/${this.props.category.id}/posts/${this.props.post.id}`, {post: post})
       .then(response => {
         console.log(response)
         this.props.updatePost(response.data)
       })
       .catch(error => console.log(error))
-  }
+  };
 
-
-    render() {
+  render() {
     return(
       <div className="tile">
-        <form onBlur={this.handleBlur} >
+        <form>
           <input className="input" type="text" name="name" placeholder="Enter name of the post"
-            value={this.state.name} onChange={this.handleInput}
+            value={this.state.name} onChange={this.handleInputName}
             ref={this.props.nameRef} />
-          <textarea className="input" name="content" placeholder="Enter content"
-            value={this.state.content} onChange={this.handleInput} ></textarea>
+          <input className="input" name="content" placeholder="Enter content"
+            value={this.state.content} onChange={this.handleInputContent} />
+          <button type="submit" onClick={this.handleSubmit}>Save</button>
         </form>
       </div>
     );

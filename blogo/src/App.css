@@ -49,11 +49,7 @@
   border: solid 1px lightgrey;
 }
 
-textarea {
-  resize: none;
-  height: 90px;
-  font-size: 11px;
-}
+
 
 .deleteButton {
   visibility: hidden;

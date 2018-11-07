@@ -1,15 +1,15 @@
-posts = Post.create(
+categories = Category.create(
     [
         {
             name: "John Travolta behavior",
-            content: "Hi is good actor"
+            description: "Hi is good actor"
         },
         {
             name: "Cake recipe",
-            content: "Made of chocolate"
+            description: "Made of chocolate"
         },
         {
             name: "Card game design",
-            content: "Need to be drunk"
+            description: "Need to be drunk"
         }
     ])

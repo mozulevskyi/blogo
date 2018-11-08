@@ -55,6 +55,11 @@ class CategoriesContainer extends Component {
   render() {
     return (
       <div>
+        <div>
+          <button className="newCategoryButton" onClick={this.addNewCategory}>
+            Add Category
+          </button>
+        </div>
         {this.state.categories.map((category) => {
           if(this.state.editingCategoryId === category.id) {
             return(<CategoryForm category={category} key={category.id} updateCategory={this.updateCategory}
@@ -64,11 +69,6 @@ class CategoriesContainer extends Component {
                           onDelete={this.deleteCategory} />)
           }
         })}
-        <div>
-          <button className="newCategoryButton" onClick={this.addNewCategory}>
-            Add Category
-          </button>
-        </div>
       </div>
     );
   }

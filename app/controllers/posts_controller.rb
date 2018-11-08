@@ -5,6 +5,12 @@ class PostsController < ApplicationController
     render json: @posts
   end
 
+  def show
+    @category = current_category
+    @post = Post.find(params[:id])
+    render json: @post
+  end
+
   def create
     @post = current_category.posts.create!(posts_params)
     if @post.save

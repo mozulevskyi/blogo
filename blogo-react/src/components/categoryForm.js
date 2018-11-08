@@ -34,12 +34,12 @@ class CategoryForm extends Component {
     return(
       <div className="tile">
         <form>
-          <input className="input" type="text" name="name" placeholder="Enter name of the category"
+          <input className="inputCatName" type="text" name="name" placeholder="Enter name of the category"
                  value={this.state.name} onChange={this.handleInputName}
                  ref={this.props.nameRef} />
-          <input className="input" name="description" placeholder="Enter description"
+          <input className="inputCatDes" name="description" placeholder="Enter description"
                  value={this.state.description} onChange={this.handleInputCategory} />
-          <button type="submit" onClick={this.handleSubmit}>Save</button>
+          <button className="saveCatBut" type="submit" onClick={this.handleSubmit}>Save</button>
         </form>
       </div>
     );

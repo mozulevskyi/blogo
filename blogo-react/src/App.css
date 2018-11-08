@@ -1,0 +1,137 @@
+.App-header {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/*category elements style*/
+.catName {
+
+}
+
+.catDes {
+
+}
+
+/*component's elements*/
+.tile {
+  height: 114px;
+  width: 29%;
+  margin-left: 3%;
+  float: left;
+  font-size: 14px;
+  text-align: left;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  margin-top: 2%;
+}
+
+/*add, save and delete buttons*/
+.newCategoryButton {
+  padding: 1%;
+  margin-left: 41%;
+  margin-top: 1%;
+  width: 17%;
+  background: orange;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  color: white;
+  font-size: 25px;
+}
+
+.newPostButton {
+  background: dimgrey;
+  color: white;
+  border: none;
+  font-size: 27px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 38px;
+  margin-top: 40px;
+  padding: 15px;
+}
+
+.newComButton {
+
+}
+
+.saveCatBut {
+  padding: 1%;
+  margin-left: 37%;
+  margin-top: 1%;
+  width: 25%;
+  background: orange;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  color: white;
+}
+
+.catDelButton {
+  visibility: hidden;
+  float: right;
+  margin-right: 7px;
+  font-size: 40px;
+  cursor: pointer;
+  color: gray;
+}
+.accordion__title:hover .catDelButton {
+  visibility: visible;
+}
+
+/*inputs*/
+.inputCatName {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  margin-top: 10px;
+  font-size: 13px;
+  width: 90%;
+  background: none;
+  padding: 1%;
+  margin-left: 4%;
+}
+.inputCatName:focus {
+  border: solid 1px lightgrey;
+}
+
+.inputCatDes {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  margin-top: 10px;
+  font-size: 13px;
+  width: 90%;
+  background: none;
+  padding: 1%;
+  margin-left: 4%;
+}
+.inputCatDes:focus {
+  border: solid 1px lightgrey;
+}
+
+
+
+/*accordion styles*/
+.accordion {
+  width: 29%;
+  margin-top: 2%;
+  margin-left: 3%;
+  display: inline-block;
+  float: left;
+}
+
+.accordion__item {
+}
+
+.accordion__title {
+  width: 93.5% !important;
+}
+

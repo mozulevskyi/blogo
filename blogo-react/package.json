@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.5",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "immutability-helper": "^2.8.1",
     "react": "^16.5.2",
     "react-accessible-accordion": "^2.4.5",

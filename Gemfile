@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.4.2'
 
 gem 'rails', '5.1.6'                                    # for ruby on rails (vs ruby on sinatra)
-gem 'puma', '~> 3.12'                                   # Use Puma as the app server
+gem 'puma', '~> 4.3'                                    # Use Puma as the app server
 
 gem 'sqlite3'                                           # Use sqlite3 as the database for Active Record
 gem 'sass-rails', '~> 5.0'                              # Use SCSS for stylesheets
